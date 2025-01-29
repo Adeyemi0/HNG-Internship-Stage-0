@@ -1,10 +1,24 @@
+# Table of Contents
+- [Dataset Overview](#dataset-overview)
+- [Data Dictionary](#data-dictionary)
+- [Data Description](#data-description)
+- [Observations](#observations)
+  - [Data Categories](#data-categories)
+  - [Missing Values](#missing-values)
+  - [Skewness and Kurtosis](#skewness-and-kurtosis)
+  - [Not Normal](#not-normal)
+  - [High Variability](#high-variability)
+  - [Engagement and Reach Metrics](#engagement-and-reach-metrics)
+  - [Interactions (Likes, Comments, Shares)](#interactions-likes-comments-shares)
+  - [Impressions by People Who Have Liked Your Page](#impressions-by-people-who-have-liked-your-page)
+
 ## Dataset Overview
 
 This dataset consists of 500 rows and 19 columns, with each row representing a post on a social media page. It includes various metrics related to the post's performance. This is just a quick overview of the dataset.
 
 The dataset can be accessed [here](https://www.kaggle.com/datasets/masoodanzar/facebook-metrics).
 
-# Data Dictionary
+## Data Dictionary
 
 | **Column Name**                                                   | **Description**                                                                 | **Data Type** | **Data Category**                                                                 |
 |-------------------------------------------------------------------|---------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
@@ -29,7 +43,7 @@ The dataset can be accessed [here](https://www.kaggle.com/datasets/masoodanzar/f
 | `Total Interactions`                                               | Total number of interactions (likes, shares, comments)                          | `integer`       | Ratio (numeric, meaningful zero, differences between values)                     |
 
 
-### Data Description
+## Data Description
 
 | Metric                                                                 | Count | Mean      | Std          | Min   | 25%     | 50%   | 75%    | Max     | Skewness  | Kurtosis    | Normality   |
 |------------------------------------------------------------------------|-------|-----------|--------------|-------|---------|-------|--------|---------|-----------|-------------|-------------|
@@ -46,7 +60,7 @@ The dataset can be accessed [here](https://www.kaggle.com/datasets/masoodanzar/f
 | share                                                                  | 496   | 27.27     | 42.61        | 0     | 10.00   | 19    | 32.25  | 790     | 12.161379 | 208.542954  | Not Normal  |
 | Total Interactions                                                     | 500   | 212.12    | 380.23       | 0     | 71.00   | 123.5 | 228.5  | 6334    | 9.712906  | 138.715780  | Not Normal  |
 
-# Observations
+## Observations
 
 ### Data Categories
 
@@ -62,30 +76,35 @@ As shown in the data dictionary table above there are four data categories in th
 - The **Paid** and **Likes** columns each have 1 missing value.
 - The **Share** column has 4 missing values.
 
-## Skewness and Kurtosis
+### Skewness and Kurtosis
 
 - **Skewness** is high across most metrics, with values far greater than 1, indicating a strong right-skewed (positive skew) distribution. This means there are a few posts that have significantly higher metrics compared to the majority. This could indicate viral posts or outliers.
 - **Kurtosis** is also very high for most metrics (above 10 for many), which suggests that the data is highly peaked with outliers (extreme values). These outliers likely represent posts with exceptional engagement, reach, or impressions.
 
-## Not Normal
+### Not Normal
 
 - The **Normality** column indicates that none of the metrics follow a normal distribution. All metrics exhibit signs of being highly skewed or having heavy tails, as evidenced by the high skewness and kurtosis. This is a typical behavior for social media data, where most posts have low interactions, but a few have extraordinarily high engagement, impressions, or reach.
 
-## High Variability
+### High Variability
 
 - The **Standard Deviation (Std)** is very high for most metrics compared to the mean. This shows significant variation in the data. For example, the standard deviation of *Lifetime Post Total Impressions* (76803.25) is much higher than the mean (29585.95), implying that most posts have relatively lower impressions, but a few posts have very high impressions.
 
-## Engagement and Reach Metrics
+### Engagement and Reach Metrics
 
 - *Lifetime Post Total Reach* and *Lifetime Post Total Impressions* show very high values (mean values of 13903 and 29585, respectively), but their standard deviations are much larger than their means, indicating that a few posts significantly contribute to the total reach and impressions.
 - The metrics related to *Lifetime Engaged Users*, *Lifetime Post Consumers*, and *Lifetime Post Consumptions* have similarly high standard deviations, suggesting a small number of posts are driving the majority of engagement.
 
-## Interactions (Likes, Comments, Shares)
+### Interactions (Likes, Comments, Shares)
 
 - **Likes**, **Comments**, and **Shares** exhibit extremely high skewness and kurtosis, suggesting that these actions are concentrated in a small number of posts, while most posts receive very few interactions. For example, *like* has a mean of 177.95 but a standard deviation of 323.40, indicating that some posts receive far more likes than the majority.
 
-## Impressions by People Who Have Liked Your Page
+### Impressions by People Who Have Liked Your Page
 
 - Metrics like *Lifetime Post Impressions by People Who Have Liked Your Page* and *Lifetime Post Reach by People Who Like Your Page* show high values, but these are still right-skewed, indicating that while some people who like the page may drive a lot of impressions, most interactions are less concentrated.
 
+---
 
+To hire a qualified tech or data analyst, click any of the following links:
+
+- [Hire Data Analysts](https://hng.tech/hire/data-analysts)
+- [Hire Tech Professionals](https://hng.tech/hire)
